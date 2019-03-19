@@ -1,12 +1,14 @@
+#pragma once
 #include "Figure.hpp"
-#include <vector>
-#include <string>
 
-class Shape: public Figure
+class Shape : public Figure
 {
-private:
+  private:
     /* data */
-public:
-    Shape(std::vector<Point> points);
+  public:
+    Shape(std::vector<Point> *points);
     ~Shape();
+    virtual float getArea();
+    virtual float getPerimeter();
+    virtual std::string toString();
 };

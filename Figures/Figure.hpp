@@ -9,9 +9,10 @@ struct Point
 
 class Figure
 {
-protected:
+  protected:
     std::vector<Point> points();
-public:
+
+  public:
     virtual float getArea();
     virtual float getPerimeter();
     virtual std::string toString();

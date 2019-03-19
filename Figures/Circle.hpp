@@ -1,14 +1,15 @@
 #pragma once
 #include "Figure.hpp"
-#include <vector>
 
-class Circle: public Figure
+class Circle : public Figure
 {
-private:
+  private:
     float radius;
-public:
+
+  public:
     Circle(Point p, float r);
     ~Circle();
     float getArea();
     float getPerimeter();
+    std::string toString();
 };
