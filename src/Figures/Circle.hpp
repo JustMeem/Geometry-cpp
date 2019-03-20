@@ -3,10 +3,8 @@
 
 class Circle : public Figure
 {
-  private:
-    float radius;
-
   public:
+    float radius;
     Circle(Point p, float r);
     ~Circle();
     float getArea();
