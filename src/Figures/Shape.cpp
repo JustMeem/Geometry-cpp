@@ -1,9 +1,12 @@
 #include "Shape.hpp"
 #include <cmath>
 
-Shape::Shape(std::vector<Point> *points)
+Shape::Shape(std::vector<Point> points)
 {
-    this->points = *points;
+    int i = 0;
+    for(Point point: points){
+        this->points[i++] = point;
+    }
 }
 float Shape::getArea()
 //формула площади Гаусса
@@ -30,7 +33,7 @@ float Shape::getPerimeter()
 
 std::string Shape::toString()
 {
-    std::string buffer = "Shape((";
+    std::string buffer = "shape((";
     for (size_t i = 0; i < this->points.size(); i++)
     {
         buffer += ' ' + this->points[i].x + ' ';

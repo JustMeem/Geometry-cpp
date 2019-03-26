@@ -20,5 +20,5 @@ float Circle::getPerimeter()
 
 std::string Circle::toString()
 {
-    return "Circle(" + this->points[0].x + ' ' + this->points[0].y + ',' + this->radius + ')';
+    return "circle(" + this->points[0].x + ' ' + this->points[0].y + ',' + this->radius + ')';
 }

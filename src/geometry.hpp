@@ -10,5 +10,6 @@ bool isIntersects(const Circle *c, const Figure *f);
 bool isIntersects(const Figure *f, const Circle *c);
 bool isIntersects(const Circle *c1, const Circle *c2);
 
-Figure fromWKT(std::string str);
+Figure *fromWKT(std::string str);
+std::vector<std::string> split(std::string str, char splitter);
 } // namespace geometry
