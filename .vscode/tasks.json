@@ -8,8 +8,12 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                // Ask msbuild to generate full paths for file names.
-                
+                "src/Main.cpp",
+                "src/Figures/*.cpp",
+                "src/geometry.cpp",
+                "-Wall",
+                "-o",
+                "geometry.exe"
             ],
             "group": "build",
             "presentation": {

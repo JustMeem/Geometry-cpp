@@ -12,6 +12,7 @@ string Triangle::toString()
         buffer += this->points[i].y;
     }
     buffer += "))";
+    return buffer;
 }
 /*
 Triangle::Triangle(std::vector<Point> points)

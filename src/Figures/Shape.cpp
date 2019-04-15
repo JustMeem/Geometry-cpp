@@ -12,7 +12,7 @@ float Shape::getArea()
 //формула площади Гаусса
 {
     int S = 0;
-    for (size_t i = 0; i < this->points.size() - 1; i++)
+    for (size_t i = 0; i < (this->points.size() - 1); i++)
     {
         S += this->points[i].x * this->points[i + 1].y -
              this->points[i].y * this->points[i + 1].x;
@@ -40,4 +40,5 @@ std::string Shape::toString()
         buffer += this->points[i].y + ',';
     }
     buffer += "))";
+    return buffer;
 }

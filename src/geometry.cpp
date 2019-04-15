@@ -45,24 +45,24 @@ Figure *geometry::fromWKT(std::string str)
     std::vector<std::string> pairs = split(v[1], ',');
     if (v[0] == "circle")
     {
-        if (pairs.size != 2)
+        if (pairs.size() != 2)
             throw "Wrong input format";
         std::vector<std::string> point = split(pairs[0], ' ');
-        if (point.size != 2)
+        if (point.size() != 2)
             throw "Wrong input format";
         Point p = {stof(point[0]), stof(point[1])};
         fig = new Circle(p, stof(pairs[1]));
     }
     else if (v[0] == "triangle")
     {
-        if (pairs.size != 4)
+        if (pairs.size() != 4)
             throw "Wrong input format";
         std::vector<Point> points;
         std::vector<std::string> buffer;
         for (std::string num : pairs)
         {
             buffer = split(num, ' ');
-            if(buffer.size != 2)
+            if(buffer.size() != 2)
                 throw "Wrong input format";
             points.push_back({stof(buffer[0]), stof(buffer[1])});
         }
@@ -75,7 +75,7 @@ Figure *geometry::fromWKT(std::string str)
         for (std::string num : pairs)
         {
             buffer = split(num, ' ');
-            if(buffer.size != 2)
+            if(buffer.size() != 2)
                 throw "Wrong input format";
             points.push_back({stof(buffer[0]), stof(buffer[1])});
         }

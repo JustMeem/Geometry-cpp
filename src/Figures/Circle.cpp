@@ -1,10 +1,12 @@
 #include "Circle.hpp"
 #define _USE_MATH_DEFINES
 #include <cmath>
+#include <sstream>
 
 Circle::Circle(Point p, float r)
 {
-    this->points[0] = p;
+    this->points.reserve(1);
+    this->points.push_back(p);
     this->radius = r;
 }
 
@@ -20,5 +22,7 @@ float Circle::getPerimeter()
 
 std::string Circle::toString()
 {
-    return "circle(" + this->points[0].x + ' ' + this->points[0].y + ',' + this->radius + ')';
+    std::stringstream ss;
+    ss << "circle(" << this->points[0].x << ' ' << this->points[0].y << ',' << this->radius << ')';
+    return ss.str();
 }
